@@ -1,0 +1,270 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f2fa;
+    color: #202033;
+    line-height: 1.7;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background-color: #172b91;
+    color: white;
+    border-bottom: 6px solid #c9c9d0;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 35px;
+}
+
+.marca h1 {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 55px;
+    color: white;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 12px 22px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.activo {
+    background-color: #304cff;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    width: 94%;
+    max-width: 1450px;
+    margin: 35px auto;
+}
+
+/* INICIO */
+.inicio {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.texto-principal {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 5px;
+    min-height: 430px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.texto-principal h2 {
+    color: #172b91;
+    margin-bottom: 20px;
+}
+
+.texto-principal p {
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.imagen-principal img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* SECCIONES GENERALES */
+.titulo-pagina {
+    display: inline-block;
+    background-color: #858ec3;
+    color: #11152c;
+    padding: 12px 30px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+
+.fila-contenido {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 45px;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.bloque-texto {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    min-height: 300px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.bloque-texto h2,
+.bloque-texto h3 {
+    color: #172b91;
+    margin-bottom: 15px;
+}
+
+.bloque-texto h3 {
+    margin-top: 22px;
+}
+
+.bloque-texto p {
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.bloque-imagen img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.pie-imagen {
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* BLOQUES QUE OCUPAN TODO EL ANCHO */
+.bloque-completo,
+.seccion-inferior {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.bloque-completo h2,
+.seccion-inferior h2 {
+    color: #172b91;
+    margin-bottom: 15px;
+}
+
+.bloque-completo p,
+.seccion-inferior p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.imagen-ancha {
+    display: block;
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* LISTA DE CURIOSIDADES */
+.lista-datos {
+    padding-left: 25px;
+}
+
+.lista-datos li {
+    margin-bottom: 15px;
+}
+
+/* FORMULARIO DE CONTACTO: SE CONSERVAN SUS CAMPOS */
+.formulario {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 650px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border: 1px solid #b8bfd8;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+.formulario button {
+    background-color: #172b91;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #304cff;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #172b91;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 750px) {
+
+    .marca {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .marca h1 {
+        font-size: 27px;
+    }
+
+    .menu a {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .inicio,
+    .fila-contenido {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .imagen-principal img,
+    .bloque-imagen img {
+        height: 250px;
+    }
+
+    .contenedor {
+        width: 92%;
+    }
+}
